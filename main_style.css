@@ -16,6 +16,10 @@ h1 {
   word-spacing: 2px;
 }
 
+a {
+  color: #a76e4d;
+}
+
 a:visited {
   color: #a76e4d;
 }
