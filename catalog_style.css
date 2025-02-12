@@ -1,0 +1,142 @@
+body{  
+  margin: 0;  
+  background-image: linear-gradient(to right, #E6D8CB, #DAB48D, #A98262);
+  font-family:  "Arial Black", Gadget, sans-serif;
+  min-width: 500px;
+  background-image: url("pic/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;   
+}
+
+.catalog_items {
+  margin: auto;
+  padding-bottom: 5%;
+  width: 80%;    
+}
+
+.name_items {
+  padding-top: 1%;
+  color: #734B34;
+  font-size: 20px;
+}
+
+.items {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5% 1%;
+    
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 200px;
+  height: auto;
+  border-radius: 5%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #d8cb8cb6;
+  overflow: hidden;
+  width: 200px;
+  height: 0;
+  border-radius: 5%;
+  transition: .5s ease;
+  
+}
+.text {
+  text-align: center;
+}
+.container:hover .overlay {
+  height: 100%;
+  box-shadow: 0px 0px 9px 5px rgb(255, 255, 255);
+}
+
+.text {
+  white-space: nowrap;
+  color: #734B34;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 960px) {
+
+  header{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .header_search{
+    margin: 10px;
+    height: 40px;
+    width: 50%;
+    color: #8e8e8e;
+  }
+
+  input[type=text] {
+    width: 65%;
+    font-size: 20px;    
+  }
+
+  input[type=submit] {
+    width: 25%;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+  }
+
+  main{
+    justify-content: center;
+  }
+
+  .items{
+    grid-template-columns: auto auto;
+  }
+
+  h1 {  
+  font-size: 20px;
+  left: 50%;
+  }
+    
+
+  .footer{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .catalog_items{
+    margin-left: 20%;
+  }
+  .items{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  
+}
